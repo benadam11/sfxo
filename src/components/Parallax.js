@@ -11,7 +11,7 @@ const Parallax = ({ isMobile, multiplier, scrollDistance }) => {
     : {
         bottom: '-60px',
         transform: scrollDistance >= 54
-          ? `translate( -50%, ${window.scrollY - multiplier * 52}px) scale(.85) `
+          ? `translate( -50%, ${window.scrollY - multiplier * 52}px) scale(.85)`
           : 'translate(-50%, 0px) scale(.85)'
       };
 
