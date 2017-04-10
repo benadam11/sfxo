@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Proxima Nova', sans-serif;
+  /*background-color: #f0f0f0;*/
+  color: #2e3338;
+  font-weight: 700;
+}
+
+a {
+  font-family: "proxima-nova";
+  font-size: 13px;
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: .1em;
+  text-decoration: none;
+  line-height: 2em;
+  color: inherit;
+}
+
+.button {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 1px;
+  line-height: 1.6em;
+  text-decoration: none;
+  padding: 1em 1.75em;
+  background-color: #2e3338;
+  display: inline-block;
+  line-height: 1em;
+  margin: 10px 0 0;
+  color: #fff;
+  border: none;
+}
+
+.button:hover {
+  opacity: .8;
+}
+
+.message {
+  text-align: center;
+  position: fixed;
+  top: 250px;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+}
+
+@media (min-width: 600px) and (max-width: 2400px) { 
+  .message {
+    top: 300px;
+    font-size: 24px;
+  }
+}
