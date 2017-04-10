@@ -41,7 +41,7 @@ class App extends Component {
   }
 
   render() {
-    const { scrollDistance, multiplier, isMobile, isLoading } = this.state;
+    const { scrollDistance, multiplier, isMobile } = this.state;
 
     return (
       <div>
