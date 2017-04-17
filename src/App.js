@@ -34,9 +34,9 @@ class App extends Component {
   }
 
   checkLastClear() {
-    let lastclear = localStorage.getItem('lastclear');
+    let lastclear = localStorage.getItem('lastclear') || 0;
     let time_now = new Date().getTime();
-    if (time_now - lastclear > 1000 * 60 * 60 * 24) {
+    if (time_now - lastclear > 1000 * 60 * 60 * 24) { 
       localStorage.clear();
       localStorage.setItem('lastclear', time_now);
     }

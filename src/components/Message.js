@@ -1,5 +1,7 @@
 import { h } from 'preact';
+
 const Message = ({ num, scrollPosition, ...props }) => {
+  
   const styles = {
     opacity: `${scrollPosition >= 54 ? 1 : 0}`,
     transform: `translate(-50%, -${scrollPosition}px)`,
