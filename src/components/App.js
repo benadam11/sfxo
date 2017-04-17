@@ -1,9 +1,9 @@
 import { h, Component } from 'preact';
-import NavBar from './components/NavBar';
-import Message from './components/Message';
-import Parallax from './components/Parallax';
-import Loader from './components/Loader';
-import './App.css';
+import NavBar from './NavBar';
+import Message from './Message';
+import Parallax from './Parallax';
+import Loader from './Loader';
+import '../assets/css/App.css';
 
 class App extends Component {
   constructor() {

@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import logo from '../logo.png';
+import logo from '../assets/images/logo.png';
 
 const NavBar = props => (
   <div className="nav-container" {...props}>
