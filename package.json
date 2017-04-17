@@ -14,8 +14,7 @@
     "build": "preact-scripts build",
     "eject": "preact-scripts eject",
     "test": "preact-scripts test",
-    "create-sprite": "sprity create ./src/ ./images/*png -s App.css --no-sort",
-    "create-sprite-mobile": "sprity create ./src/ ./images-mobile/*png -n sprite-mobile -s App.mobile.css --no-sort",
+    "create-sprite": "sprity create ./src/ ./images/*jpg -s App.css --no-sort --margin 0",
     "deploy": "npm run build && surge ./build"
   },
   "eslintConfig": {

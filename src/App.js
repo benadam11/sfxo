@@ -1,8 +1,9 @@
 import { h, Component } from 'preact';
-import { throttle } from 'lodash';
+// import { throttle } from 'lodash';
 import NavBar from './components/NavBar';
 import Message from './components/Message';
 import Parallax from './components/Parallax';
+import Loader from './components/Loader';
 import './App.css';
 
 class App extends Component {
@@ -10,18 +11,21 @@ class App extends Component {
     super();
     this.updateScroll = this.updateScroll.bind(this);
     this.handleResize = this.handleResize.bind(this);
-    this.state = { scrollDistance: 0, multiplier: 60 };
+    this.state = { scrollDistance: 0, multiplier: 60, isLoading: true };
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', throttle(this.updateScroll, 1), false);
+    window.addEventListener('scroll', this.updateScroll, false);
     window.addEventListener('resize', this.handleResize, false);
     this.handleResize();
+    setTimeout(() => {
+      this.setState({ isLoading: false });
+    }, 4000);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll');
-    window.removeEventListener('resize');
+    window.removeEventListener('scroll', this.updateScroll);
+    window.removeEventListener('resize', this.handleResize);
   }
 
   updateScroll() {
@@ -41,17 +45,20 @@ class App extends Component {
   }
 
   render() {
-    const { scrollDistance, multiplier, isMobile } = this.state;
+    const { scrollDistance, multiplier, isMobile, isLoading } = this.state;
 
     return (
       <div>
         <NavBar />
         <Message num="50" scrollPosition={scrollDistance} />
-        <Parallax
-          isMobile={isMobile}
-          multiplier={multiplier}
-          scrollDistance={scrollDistance}
-        />
+        {isLoading
+          ? <Loader />
+          : <Parallax
+              isMobile={isMobile}
+              multiplier={multiplier}
+              scrollDistance={scrollDistance}
+            />}
+
       </div>
     );
   }

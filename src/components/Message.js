@@ -13,7 +13,7 @@ const Message = ({ num, scrollPosition, ...props }) => {
       <h1 className="heading">
         Thank you for your support thus far! We have {num} hats left.
       </h1>
-      <a className="button" href="#" children="shop now" />
+      <a className="button" href="https://sfxo.co/shop/ggb-cap" children="shop now" />
     </div>
   );
 };

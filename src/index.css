@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Proxima Nova', sans-serif;
-  /*background-color: #f0f0f0;*/
+  background-color: #f0f0f0;
   color: #2e3338;
   font-weight: 700;
 }
@@ -16,6 +16,34 @@ a {
   text-decoration: none;
   line-height: 2em;
   color: inherit;
+}
+
+.nav-container {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.nav {
+  padding: 10px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+.message {
+  text-align: center;
+  position: fixed;
+  top: 185px;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
 }
 
 .button {
@@ -38,19 +66,47 @@ a {
   opacity: .8;
 }
 
-.message {
-  text-align: center;
-  position: fixed;
-  top: 250px;
-  z-index: 2;
+.loader-wrapper {
+  position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  font-size: 16px;
+  transform: translate(-50%, -50%);
+  height: 68px;
+  width: 200px;
 }
 
-@media (min-width: 600px) and (max-width: 2400px) { 
+.loader-text {
+  background: -webkit-gradient(
+    linear, left top, right top, 
+    color-stop(0, #2e3338), 
+    color-stop(0.750, #2e3338), 
+    color-stop(0.875, #999), 
+    color-stop(1, #2e3338));
+  font-size: 24px;
+  font-weight: 700;
+  width: 200px;
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: glint 2s infinite;
+}
+
+@-webkit-keyframes glint {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 2400px) {
   .message {
     top: 300px;
     font-size: 24px;
   }
+  .nav {
+    padding: 25px 80px;
+  }
 }
+
