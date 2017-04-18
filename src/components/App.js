@@ -3,8 +3,8 @@ import NavBar from './NavBar';
 import Message from './Message';
 import Parallax from './Parallax';
 import Loader from './Loader';
-import '../assets/css/App.css';
 import sprite from '../assets/images/sprite.jpg';
+import '../assets/css/App.css';
 
 class App extends Component {
   constructor() {
