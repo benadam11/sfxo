@@ -46,6 +46,17 @@ a {
   font-size: 14px;
 }
 
+.heading {
+  font-size: 2em;
+  margin: 0 0 20px 0;
+}
+
+.sub-heading {
+  margin: 0 0 20px 0;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
 .button {
   font-size: 16px;
   text-transform: uppercase;
@@ -77,10 +88,10 @@ a {
 
 .loader-text {
   background: -webkit-gradient(
-    linear, left top, right top, 
-    color-stop(0, #2e3338), 
-    color-stop(0.750, #2e3338), 
-    color-stop(0.875, #999), 
+    linear, left top, right top,
+    color-stop(0, #2e3338),
+    color-stop(0.750, #2e3338),
+    color-stop(0.875, #999),
     color-stop(1, #2e3338));
   font-size: 24px;
   font-weight: 700;
@@ -109,4 +120,3 @@ a {
     padding: 25px 80px;
   }
 }
-
