@@ -15,7 +15,7 @@
     "eject": "preact-scripts eject",
     "test": "preact-scripts test",
     "create-sprite": "sprity create ./src/ ./images/*jpg -s App.css --no-sort --margin 0",
-    "deploy": "npm run build && surge ./build"
+    "deploy": "npm run build && surge ./build 50.sfxo.co"
   },
   "eslintConfig": {
     "extends": "./node_modules/preact-scripts/config/eslint.js"

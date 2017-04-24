@@ -17,7 +17,7 @@ const Parallax = ({ isMobile, multiplier, scrollDistance }) => {
 
   const styles = {
     container: {
-      height: isMobile ? `${multiplier * 65}px` : `${multiplier * 74}px`
+      height: isMobile ? `${multiplier * 65}px` : `${multiplier * 72}px`
     },
     child: {
       position: 'fixed',
